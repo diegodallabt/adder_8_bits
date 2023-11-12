@@ -1,0 +1,13 @@
+v 4
+file . "mux_for_ops.vhdl" "cdf63b7e8be3738a7f5003993400b148c534e122" "20231112083600.488":
+  entity mux_for_ops at 1( 0) + 0 on 17;
+  architecture mux_logic of mux_for_ops at 13( 257) + 0 on 18;
+file . "fadder_tb.vhdl" "49e7147f528f183df7c0712124af99d8da8ba2b4" "20231112083600.487":
+  entity fadder8_tb at 1( 0) + 0 on 15;
+  architecture behavior of fadder8_tb at 8( 108) + 0 on 16;
+file . "fadder_8_bits.vhdl" "1bc5e957ce96aa8b45d87a5079e51d9c682e9718" "20231112083600.485":
+  entity fadder8 at 1( 0) + 0 on 13;
+  architecture adder8bit of fadder8 at 17( 393) + 0 on 14;
+file . "fadder_1_bit.vhdl" "06b208687bad08046ff9435a51bfe76cbdcc6f73" "20231112083600.484":
+  entity fadder1 at 1( 0) + 0 on 11;
+  architecture adder1bit of fadder1 at 14( 239) + 0 on 12;
