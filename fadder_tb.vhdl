@@ -88,6 +88,19 @@ begin
       op <= '0';
       wait for tempo_de_parada;
 
+      -- 0x68 - 0x03
+      a <= "01101000";
+      b <= "00000011";
+      cin <= '0';
+      op <= '1';
+      wait for tempo_de_parada;
+      
+      -- 0x68 + 0x03
+      a <= "01101000";
+      b <= "00000011";
+      cin <= '0';
+      op <= '0';
+      wait for tempo_de_parada;
       wait;
    end process;
 
