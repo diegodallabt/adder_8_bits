@@ -13,6 +13,6 @@ end fadder1;
 
 architecture adder1bit of fadder1 is
 begin   
-    s    <= a xor b xor cin;
+    s    <= a xor (b xor cin);
     cout <= (a and b) or (cin and (a xor b));
 end architecture adder1bit;

@@ -46,14 +46,47 @@ begin
 
    tb_proc: process
    begin          
-
-      a <= "00001111";
+      -- 0x00 + 0xFF
+      a <= "00000000";
+      b <= "11111111";
+      cin <= '0';
+      op <= '0';
+      wait for tempo_de_parada;
+      
+      -- 0x00 - 0xFF
+      a <= "00000000";
+      b <= "11111111";
+      cin <= '0';
+      op <= '1';
+      wait for tempo_de_parada;
+      
+      -- 0xFF + 0x01
+      a <= "11111111";
       b <= "00000001";
       cin <= '0';
       op <= '0';
-
       wait for tempo_de_parada;
- 
+      
+      -- 0xFF - 0x01
+      a <= "11111111";
+      b <= "00000001";
+      cin <= '0';
+      op <= '1';
+      wait for tempo_de_parada;
+      
+      -- 0xFE + 0xFE
+      a <= "11111110";
+      b <= "11111110";
+      cin <= '0';
+      op <= '0';
+      wait for tempo_de_parada;
+      
+      -- 0xFF + 0xFF
+      a <= "11111111";
+      b <= "11111111";
+      cin <= '0';
+      op <= '0';
+      wait for tempo_de_parada;
 
       wait;
    end process;
